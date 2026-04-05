@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentaciones Interactivas | SPEN 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slides-styles.css">
+</head>
+<body>
+
+    <!-- Pantalla de Inicio: Selector de Presentaciones -->
+    <div class="start-screen" id="start-screen">
+        <h1>Presentaciones Interactivas SPEN 2026</h1>
+        <p>Selecciona el dia que deseas estudiar. Navega con las flechas del teclado o los botones.</p>
+        <div class="day-grid" id="day-grid">
+            <!-- JS genera las tarjetas -->
+        </div>
+    </div>
+
+    <!-- Visor de Presentacion -->
+    <div class="pres-container" id="pres-container">
+
+        <!-- Header -->
+        <div class="pres-header">
+            <div class="pres-title" id="pres-title-text"></div>
+            <div class="pres-counter" id="pres-counter">1 / 1</div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="fill" id="progress-fill" style="width: 0%"></div>
+        </div>
+
+        <!-- Slide Area -->
+        <div class="slide-area" id="slide-area">
+            <!-- JS renderiza la diapositiva activa -->
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-controls">
+            <button class="nav-btn" id="btn-prev" onclick="navigate(-1)">&#8592; Anterior</button>
+            <div class="nav-dots" id="nav-dots"></div>
+            <button class="nav-btn" id="btn-next" onclick="navigate(1)">Siguiente &#8594;</button>
+        </div>
+
+        <!-- Home button -->
+        <div style="text-align: center; padding-bottom: 0.5rem;">
+            <button class="nav-btn btn-home" onclick="goHome()">ESC | Volver al menu</button>
+        </div>
+    </div>
+
+    <!-- Motor de Slides -->
+    <script src="slides.js"></script>
+
+    <!-- Contenido de presentaciones (un archivo por dia) -->
+    <script src="contenido/dia_01.js"></script>
+    <script src="contenido/dia_02.js"></script>
+    <script src="contenido/dia_03.js"></script>
+    <script src="contenido/dia_04.js"></script>
+    <script src="contenido/dia_05.js"></script>
+    <script src="contenido/dia_06.js"></script>
+    <script src="contenido/dia_07.js"></script>
+    <script src="contenido/dia_08.js"></script>
+    <script src="contenido/dia_09.js"></script>
+    <script src="contenido/dia_10.js"></script>
+
+</body>
+</html>
